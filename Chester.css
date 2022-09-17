@@ -1,0 +1,209 @@
+@charset "UTF-8";
+/*
+	@theme Chester
+	@override-placeholders html, xml, css, sourcecode.js, php, ruby, regex
+	@version 0.1.0
+	@author enderlinp
+*/
+:document-base {
+  color: #dbe6ec;
+  background-color: #2c3643;
+  insertion-point-color: white;
+  selection-background-color: #1d508d;
+  current-line-background-color: #2c3643;
+}
+
+sourcecode, source, tag, css, js, php, ruby {
+  spell-check: disabled;
+}
+
+attribute-name {
+  color: #ffc83f;
+}
+
+attribute-value {
+  color: #16c98d;
+}
+attribute-value.string.quoted {
+  color: #dbe6ec;
+}
+
+class.definition name {
+  color: #ffc83f;
+}
+class.definition keyword.control {
+  color: #ff708e;
+}
+
+comment {
+  color: #99a9b3;
+}
+comment.block.documentation keyword {
+  color: #8abee5;
+}
+
+constant {
+  color: #ffc83f;
+}
+constant.character.escape {
+  color: #0fdebd;
+}
+
+delimiter.source {
+  color: #f82d2a;
+}
+
+entity.name {
+  color: #fa5e5b;
+}
+
+function {
+  color: #288ad6;
+}
+function.definition name {
+  color: #288ad6;
+  font-weight: bold;
+}
+function.definition keyword.control {
+  color: #ff708e;
+}
+
+keyword.control {
+  color: #8abee5;
+}
+keyword.control.x-as {
+  color: #dbe6ec;
+}
+keyword.language.function {
+  color: #0fdebd;
+}
+keyword.language.function[text=exit], keyword.language.function[text=include], keyword.language.function[text=include_once] keyword.language.function[text=require], keyword.language.function[text=require_once], keyword.language.function[text=return] {
+  color: #8abee5;
+}
+keyword.modifier.scope {
+  color: #ff708e;
+}
+keyword.storage.type {
+  color: #ff708e;
+}
+keyword.variable {
+  color: #fa5e5b;
+}
+
+interpolated-code punctuation.definition {
+  color: #f82d2a;
+}
+
+string.quoted {
+  color: #16c98d;
+}
+string.quoted constant.character.escape {
+  background-color: rgba(22, 201, 141, 0.15);
+}
+string.quoted punctuation {
+  color: #dbe6ec;
+}
+string.quoted variable {
+  color: #16c98d;
+}
+
+support.variable.built-in {
+  color: #ffc83f;
+}
+
+variable {
+  color: #fa5e5b;
+}
+variable.class {
+  color: #ffc83f;
+}
+variable.function {
+  color: #0fdebd;
+}
+variable punctuation {
+  color: #dbe6ec;
+}
+
+/* CSS */
+css.selector {
+  color: #fa5e5b;
+}
+css.selector punctuation.comma {
+  color: #ff708e;
+}
+
+property-value {
+  color: #ffc83f;
+}
+property-value punctuation {
+  color: #dbe6ec;
+}
+property-value .rgb-value {
+  color: #0fdebd;
+}
+property-value .rgb-value punctuation {
+  color: #ffc83f;
+}
+
+/* JavaScript */
+js comment.block.documentation keyword {
+  color: #ff708e;
+}
+js function[text=data], js function[text=cookie] {
+  color: #ffc83f;
+}
+
+/* Regex */
+regex {
+  color: #0fdebd;
+}
+regex character-class {
+  color: #ffc83f;
+}
+regex character-class operator {
+  color: #dbe6ec;
+}
+regex character-class punctuation.definition.begin,
+regex character-class punctuation.definition.end {
+  color: #ffc83f;
+}
+regex group {
+  color: #0fdebd;
+}
+regex group operator {
+  color: #dbe6ec;
+}
+regex operator {
+  color: #dbe6ec;
+}
+regex operator[text="^"],
+regex operator[text="$"] {
+  color: #8abee5;
+}
+regex punctuation.definition.begin,
+regex punctuation.definition.end {
+  color: #dbe6ec;
+}
+
+/* Ruby */
+ruby  class.definition keyword.control {
+  color: #8abee5;
+}
+ruby  variable {
+  color: #dbe6ec;
+}
+ruby  variable.constant {
+  color: #ffc83f;
+}
+ruby  variable.function.method {
+  color: #288ad6;
+}
+ruby  variable.instance {
+  color: #fa5e5b;
+}
+ruby  variable.symbol {
+  color: #16c98d;
+}
+ruby  variable.symbol punctuation {
+  color: #ffc83f;
+}

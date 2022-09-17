@@ -1,0 +1,279 @@
+/*
+	@theme Chester
+	@override-placeholders html, xml, css, sourcecode.js, php, ruby, regex
+	@version 0.1.0
+	@author enderlinp
+*/
+@import "syntax-variables.scss";
+
+:document-base {
+  color: $syntax-text-color;
+  background-color: $syntax-background-color;
+  insertion-point-color: $syntax-cursor-color;
+  selection-background-color: $syntax-selection-color;
+  current-line-background-color: $syntax-background-color;
+}
+
+sourcecode, source, tag, css, js, php, ruby {
+  spell-check: disabled;
+}
+
+attribute-name {
+	color: $orange;	
+}
+
+attribute-value {
+	color: $green;
+	
+	&.string.quoted {
+		color: $very-light-gray;
+	}
+}
+
+class {
+	&.definition {
+		name {
+			color: $orange;
+		}
+		
+		keyword {
+			&.control {
+				color: $purple;
+			}
+		}
+	}
+}
+
+comment {
+	color: $light-gray;
+	
+	&.block.documentation {
+		keyword {
+			color: $softblue;
+		}
+	}
+}
+
+constant {
+	color: $orange;
+	
+	&.character.escape {
+		color: $cyan;
+	}
+}
+
+delimiter.source {
+	color: darken($red, 10%);
+}
+
+entity.name {
+	color: $red;
+}
+
+function {
+	color: $blue;
+	
+	&.definition {
+		name {
+			color: $blue;
+            font-weight: bold;
+		}
+		
+		keyword.control {
+			color: $purple;
+		}
+	}
+}
+
+keyword {
+	&.control {
+		color: $softblue;	
+		
+		&.x-as {
+			color: $syntax-text-color;
+		}
+	}
+
+	&.language.function {
+		color: $cyan;
+		
+		&[text="exit"],
+		&[text="include"],
+		&[text="include_once"] 
+		&[text="require"],
+		&[text="require_once"],
+		&[text="return"]  {
+			color: $softblue;
+		}
+	}
+	
+	&.modifier.scope {
+		color: $purple;
+	}
+
+	&.storage.type {
+		color: $purple;
+	}
+
+	&.variable {
+		color: $red;
+	}
+}
+
+punctuation {
+
+	&.definition {
+		interpolated-code & {
+			color: darken($red, 10%);
+		}	
+	}
+}
+
+string.quoted {
+	color: $green;
+	
+    constant.character.escape {
+        background-color: rgba($green, 15%);
+    }
+    
+	punctuation {
+		color: $syntax-text-color;
+	}
+	
+	variable {
+		color: $green;
+	}
+}
+
+support.variable.built-in {
+	color: $orange;
+}
+
+variable {	
+	color: $red;
+	
+	&.class {
+		color: $orange;
+	}
+
+	&.function {
+		color: $cyan;
+	}
+	
+	punctuation {
+		color: $very-light-gray;
+	}
+}
+
+/* CSS */
+css.selector {
+	color: $red;
+	
+	punctuation.comma {
+		color: $purple;
+	}
+}
+
+property-value {
+	color: $orange;
+	
+	punctuation {
+		color: $very-light-gray;
+	}
+	
+	.rgb-value {
+		color: $cyan;
+		
+		punctuation {
+			color: $orange;
+		}
+	}
+}
+
+/* JavaScript */
+js {	
+	comment.block.documentation {
+		keyword {
+			color: $purple;
+		}
+	}
+	
+	function {
+		&[text="data"], &[text="cookie"] {
+			color: $orange;
+		}
+	}
+}
+
+/* Regex */
+regex {
+	color: $cyan;
+	
+	character-class {
+		color: $orange;
+		
+		operator {
+			color: $syntax-text-color;
+		}
+		
+		punctuation.definition.begin,
+		punctuation.definition.end {
+			color: $orange;
+		}
+	}
+	
+	group {
+		color: $cyan;
+		
+		operator {
+			color: $syntax-text-color;
+		}
+	}
+	
+	operator {
+		color: $syntax-text-color;
+	}
+	
+	operator[text="^"],
+	operator[text="$"] {
+		color: $softblue;
+	}
+	
+	punctuation.definition.begin,
+	punctuation.definition.end {
+		color: $syntax-text-color;
+	}
+}
+
+/* Ruby */
+ruby {
+	class.definition {
+		keyword.control {
+			color: $softblue;
+		}	
+	}
+	
+	variable {
+		color: $syntax-text-color;
+		
+		&.constant {
+			color: $orange;
+		}
+		
+		&.function.method {
+			color: $blue;
+		}
+		
+		&.instance {
+			color: $red;
+		}
+		
+		&.symbol {
+			color: $green;
+			
+			punctuation {
+				color: $orange;
+			}
+		}
+	}
+}
