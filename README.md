@@ -1,5 +1,5 @@
 # Chester Espresso Theme
-A port of Chester Theme for Kangacode's [Espresso](https://www.espressoapp.com).
+A port of Chester Theme for Espresso Apps [Espresso](https://www.espressoapp.com).
 
 This version supports HTML, CSS, Javascript, PHP and Regex.
 
